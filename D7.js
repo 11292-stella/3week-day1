@@ -30,7 +30,7 @@ console.log(arrayDieci(20))
 const namPari = [1, 2, 3, 4, 5, 6]
 
 namPari.filter((pari) => {
-  if (pari / 2) {
+  if (pari % 2 === 0) {
     return true
   } else {
     return false
