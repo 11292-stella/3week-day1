@@ -27,14 +27,31 @@ console.log(arrayDieci(20))
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
+const namPari = [1, 2, 3, 4, 5, 6]
 
+namPari.filter((pari) => {
+  if (pari / 2) {
+    return true
+  } else {
+    return false
+  }
+})
+console.log(namPari)
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+const numeriDaSom = [1, 2, 3, 4, 5]
+
+numeriDaSom.forEach((num1, i) => {
+  let risultate1 = num1 + i
+  console.log(risultate1)
+})
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+
+const NumeArrey = [2, 8, 3, 7]
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
