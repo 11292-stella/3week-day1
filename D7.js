@@ -56,14 +56,14 @@ numeriDaSom.forEach((num1) => {
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
-const increment = function (array, n) {
-  const nArrey = array.map((value) => {
-    return value + n
+/*const increment = function (array, n) {
+  const newArrey = array.map((value) => {
+    return value + n 
   })
-  return nArray
+  return newArray
 }
 
-console.log(increment([4, 78, 32, 100]))
+console.log(increment([4, 78, 32, 100])) //
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
@@ -73,6 +73,19 @@ console.log(increment([4, 78, 32, 100]))
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+function creaArrayDispari() {
+  let arrayDispari = []
+
+  for (let i = 1; i <= 99; i++) {
+    if (i % 2 !== 0) {
+      arrayDispari.push(i)
+    }
+  }
+
+  return arrayDispari
+}
+
+console.log(creaArrayDispari())
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -194,6 +207,17 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
+const findTheOldest = function () {
+  const oldestMovie = movies[0]
+  movies.forEach((movie) => {
+    if (movie.Year < oldestMovie.Year) {
+      oldestMovie = movie
+    }
+  })
+  console.log(oldestMovie)
+}
+
+findTheOldest()
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
