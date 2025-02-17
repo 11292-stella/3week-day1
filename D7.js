@@ -18,6 +18,7 @@ piuStringhe(`ciaone`, `burrone`)
 const arrayDieci = function () {
   let array1 = []
   for (let i = 0; i < 10; i++) {
+    const random = Math.floor(Math.random() * 101)
     array1.push(i + 10)
   }
   return array1
@@ -29,21 +30,21 @@ console.log(arrayDieci(20))
 */
 const namPari = [1, 2, 3, 4, 5, 6]
 
-namPari.filter((pari) => {
+const evenarray = namPari.filter((pari) => {
   if (pari % 2 === 0) {
     return true
   } else {
     return false
   }
 })
-console.log(namPari)
+console.log(evenarray)
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 const numeriDaSom = [1, 2, 3, 4, 5]
-
-numeriDaSom.forEach((num1, i) => {
-  let risultate1 = num1 + i
+let risultate1 = 0
+numeriDaSom.forEach((num1) => {
+  risultate1 = risultate1 + num1
   console.log(risultate1)
 })
 
@@ -51,11 +52,18 @@ numeriDaSom.forEach((num1, i) => {
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
-const NumeArrey = [2, 8, 3, 7]
-
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+
+const increment = function (array, n) {
+  const nArrey = array.map((value) => {
+    return value + n
+  })
+  return nArray
+}
+
+console.log(increment([4, 78, 32, 100]))
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
